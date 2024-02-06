@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root{
+--White: hsl(0, 0%, 100%);
+--Rose-White: hsl(330, 100%, 98%);
+--Eggshell: hsl(30, 54%, 90%);
+--Light-Grey: hsl(30, 18%, 87%);
+--Wenge-Brown: hsl(30, 10%, 34%);
+--Dark-Charcoal: hsl(24, 5%, 18%);
+
+--Nutmeg: hsl(14, 45%, 36%);
+--Dark-Raspberry: hsl(332, 51%, 32%);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height:100%;
+    min-width:100%;
+    min-height:100%;
+    margin:0px;
+    padding-inline: 0;
+    padding-block: 6rem;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    background: var(--Eggshell);
+}
+.container{
+    width:720px;
+    min-width: 720px;
+    background: var(--Rose-White);
+    object-fit: cover;
+    padding:2rem;
+    border-radius: 10px;
+}
+img{
+    width:100%;
+    border-radius: 10px;
+}
+
+h1{
+    font-family: 'Young Serif',sans-serif;
+    font-weight: 400;
+    color:var(--Dark-Charcoal);
+}
+p,li{
+    font-family: 'Outfit',sans-serif;
+    font:16px;
+    color:var(--Wenge-Brown);
+    margin-bottom:1rem;
+    font-weight:400;
+}
+strong{
+    font-weight: 700;
+    font-family: 'Outfit',sans-serif;
+}
+h3{
+    margin-top:4rem;
+    font-family: 'Outfit',sans-serif;
+    color:var(--Dark-Raspberry);
+}
+.preparation > li{
+    color:var(--Dark-Raspberry);
+}
+ul{
+    margin-bottom:2rem;
+}
+.preparation > li,
+ul > li,
+ol > li{
+    padding-left:1rem;
+}
+ol>li{
+    font-weight: 700;
+}
+h2{
+    font-family: 'Young Serif',sans-serif;
+    font-weight: 400;
+    color:var(--Nutmeg)
+}
+hr{
+    border:0;
+    height:1px;
+    margin-block:2rem;
+    background-color: var(--Light-Grey);
+}
+.nutrition{
+    width:100%;
+}
+.nutrition>hr{
+    margin-block: .5rem;
+}
+.nutrition>div{
+    display:flex;
+    place-items: center;
+    gap:6rem;
+    width:100%;
+    padding-inline:2rem;
+}
+.nutrition>div>p{
+    width:30%;
+}
+.nutrition>div>strong{
+    width:50%;
+    width:70px;
+    color: var(--Nutmeg);
+}
+@media screen and (max-width:720px) {
+    body{
+        margin:0;
+        padding:0;
+    }
+    .container{
+        width:100%;
+        max-width:100%;
+        min-width:100%;
+        padding:0;
+    }
+    h1,h2,h3,p,li{
+        margin-left:3rem;
+    }
+    h3{
+        margin-left:5rem;
+    }
+    .preparation>li{
+        margin-left:5rem;
+    }
+    ol>li>p,ul>li>p{
+        margin-left:0;
+    }
+}
